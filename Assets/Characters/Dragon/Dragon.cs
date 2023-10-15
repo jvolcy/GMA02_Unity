@@ -27,7 +27,7 @@ public class Dragon : MonoBehaviour
     {
         var pos = transform.position;
 
-        pos.y += speed * Input.GetAxis("Vertical");
+        pos.y += speed * Time.deltaTime * Input.GetAxis("Vertical");
 
         pos.y = Mathf.Clamp(pos.y, bottomPosition, topPosition);
         transform.position = pos;

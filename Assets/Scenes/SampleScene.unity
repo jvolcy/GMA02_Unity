@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topPosition: 165
   bottomPosition: -165
-  speed: 0.5
+  speed: 300
   FireballPrefab: {fileID: 9204333522895148406, guid: 948b9b0b59cdd4d98a1dee640eb12850, type: 3}
 --- !u!58 &192836098
 CircleCollider2D:
@@ -391,6 +391,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  babiesSaved: 0
+  babiesLost: 0
+  demonsKilled: 0
+  demonStrikes: 0
 --- !u!1 &1213155202
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topPosition: 150
   bottomPosition: -170
-  speed: 0.25
+  speed: 150
   babyPrefab: {fileID: 217279847500637416, guid: c0b26111025584c738213438924a4c3d, type: 3}
   demonPrefab: {fileID: 5463442266312469205, guid: 5cf8e9dbfcbc447d982f67def6f91a94, type: 3}
   minFutureTime: 0.1

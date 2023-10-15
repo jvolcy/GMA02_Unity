@@ -41,12 +41,12 @@ public class Boss : MonoBehaviour
 
         if (goingUp)
         {
-            pos.y += speed;
+            pos.y += speed * Time.deltaTime;
             if (pos.y > topPosition) goingUp = false;
         }
         else
         {
-            pos.y -= speed;
+            pos.y -= speed * Time.deltaTime;
             if (pos.y < bottomPosition) goingUp = true;
         }
 
