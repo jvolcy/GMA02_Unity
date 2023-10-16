@@ -33,13 +33,28 @@ public class Baby : MonoBehaviour
         if (collision.CompareTag("Dragon"))
         {
             gameManager.BabyHitDragon();
-            Destroy(gameObject);
+
+            //disable the collider
+            GetComponent<CircleCollider2D>().enabled = false;
+
+            //disable the sprite renderer
+            GetComponent<SpriteRenderer>().enabled = false;
+
+            //Destroy(gameObject);
         }
 
         if (collision.CompareTag("Fireball"))
         {
             gameManager.BabyHitFireball();
-            Destroy(gameObject);
+
+            //disable the collider
+            GetComponent<CircleCollider2D>().enabled = false;
+
+            //disable the sprite renderer
+            GetComponent<SpriteRenderer>().enabled = false;
+
+            GetComponent<AudioSource>().Play();
+            //Destroy(gameObject);
         }
 
     }

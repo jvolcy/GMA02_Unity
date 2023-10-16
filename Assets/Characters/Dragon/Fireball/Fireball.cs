@@ -19,7 +19,7 @@ public class Fireball : MonoBehaviour
         pos.x += speed * Time.deltaTime;
         transform.position = pos;
 
-        if (pos.x > 640)
+        if (pos.x > 320)
         {
             Destroy(gameObject);
         }
@@ -27,6 +27,11 @@ public class Fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        //disable the collider
+        GetComponent<CircleCollider2D>().enabled = false;
+
+        //disable the sprite renderer
+        GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }

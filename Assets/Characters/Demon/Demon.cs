@@ -33,13 +33,27 @@ public class Demon : MonoBehaviour
         if (collision.CompareTag("Dragon"))
         {
             gameManager.DemonHitDragon();
-            Destroy(gameObject);
+
+            //disable the collider
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            //disable the sprite renderer
+            GetComponent<SpriteRenderer>().enabled = false;
+            //Destroy(gameObject);
         }
 
         if (collision.CompareTag("Fireball"))
         {
             gameManager.DemonHitFireball();
-            Destroy(gameObject);
+
+            //disable the collider
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            //disable the sprite renderer
+            GetComponent<SpriteRenderer>().enabled = false;
+
+            GetComponent<AudioSource>().Play();
+            //Destroy(gameObject);
         }
 
     }
